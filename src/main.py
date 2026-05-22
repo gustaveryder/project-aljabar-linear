@@ -47,7 +47,7 @@ def siapkan_dataset(path_folder, ukuran_wajah=(50, 50)):
     return matriks_A_mentah, label_wajah
 
 if __name__ == "__main__":
-    folder_dataset = "./database"
+    folder_dataset = "test_data"
 
     if os.path.exists(folder_dataset):
         matriks_A, label = siapkan_dataset(folder_dataset)
