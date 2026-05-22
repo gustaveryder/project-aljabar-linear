@@ -1,2 +1,2 @@
-#﻿# Project-Aljabar-Linear
+## Project-Aljabar-Linear
 ### Python Face Recognition
