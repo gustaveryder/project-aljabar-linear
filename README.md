@@ -2,16 +2,15 @@
 
 
 
-Aplikasi **pengenalan wajah** menggunakan algoritma **Eigenface** (Turk & Pentland, 1991), dibuat dari nol sebagai tugas mata kuliah **Aljabar Linear** di **Universitas Sebelas Maret (UNS)**.
+Aplikasi **pengenalan wajah** menggunakan algoritma **Eigenface** (Turk & Pentland, 1991), sebagai tugas mata kuliah **Aljabar Linear** di **Universitas Sebelas Maret (UNS)**.
 
-Metode numerik inti — **dekomposisi eigen** dan **jarak Euclidean** — diimplementasikan **secara manual** tanpa menggunakan pustaka aljabar linear siap pakai, sesuai dengan persyaratan tugas.
 
 ---
 
 ## Fitur
 
 - **Nilai Eigen & Vektor Eigen Kustom**  
-  Power Iteration dengan deflasi Hotelling — tidak menggunakan `numpy.linalg.eig` atau sejenisnya.
+  Power Iteration dengan deflasi Hotelling, tidak menggunakan `numpy.linalg.eig` atau sejenisnya.
 
 - **Jarak Euclidean Kustom**  
   Akar kuadrat manual menggunakan Newton‑Raphson dan loop aritmatika murni.
@@ -49,7 +48,7 @@ Metode numerik inti — **dekomposisi eigen** dan **jarak Euclidean** — diimpl
 ## Persyaratan
 
 - Python 3.8 atau lebih baru
-- Pustaka berikut (lihat `requirements.txt`):
+- _Library_ berikut (lihat `requirements.txt`):
 
 | Pustaka         | Fungsi                                  |
 |-----------------|-----------------------------------------|
@@ -70,7 +69,7 @@ Metode numerik inti — **dekomposisi eigen** dan **jarak Euclidean** — diimpl
 1. **Unduh atau clone repositori**:
    ```bash
    git clone https://github.com/username-anda/eigenface-recognition.git
-   cd eigenface-recognition
+   cd src
    ```
 
 2. **(Opsional namun disarankan)** Buat lingkungan virtual:
@@ -159,9 +158,8 @@ Tidak ada `linalg.eig`, `linalg.norm`, atau `math.sqrt` yang digunakan untuk ope
 
 ## Tampilan GUI
 
-*(Tambahkan tangkapan layar GUI ke dalam folder `screenshots/` dan ganti path di bawah jika ada)*
 
-![GUI](screenshots/gui.png)
+![GUI]("https://github.com/GustaveRyder/Project-Aljabar-Linear/edit/main/Screenshot 2026-05-24 162615.png")
 
 - **Panel Kiri**: Pemilihan dataset, pemilihan gambar uji, hasil (skor kemiripan, label, jarak), dan tombol kontrol.
 - **Panel Tengah**: Tampilan berdampingan gambar uji dan kecocokan terdekat.
