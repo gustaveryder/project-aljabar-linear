@@ -159,7 +159,7 @@ Tidak ada `linalg.eig`, `linalg.norm`, atau `math.sqrt` yang digunakan untuk ope
 ## Tampilan GUI
 
 
-![GUI]("https://github.com/GustaveRyder/Project-Aljabar-Linear/edit/main/Screenshot 2026-05-24 162615.png")
+[![GUI](Screenshot.png)](https://github.com/GustaveRyder/Project-Aljabar-Linear/blob/main/Screenshot.png)
 
 - **Panel Kiri**: Pemilihan dataset, pemilihan gambar uji, hasil (skor kemiripan, label, jarak), dan tombol kontrol.
 - **Panel Tengah**: Tampilan berdampingan gambar uji dan kecocokan terdekat.
