@@ -17,7 +17,7 @@ def kenali_wajah(path_gambar_uji: str,
                  path_paths: list,
                  ukuran_wajah: tuple = (50, 50),
                  threshold: float = 8000.0) -> tuple:
-    """Mengenali wajah dari gambar uji."""
+    # Mengenali wajah dari gambar uji.
     path_cascade = os.path.join(cv2.data.haarcascades, 'haarcascade_frontalface_default.xml')
     detektor_wajah = cv2.CascadeClassifier(path_cascade)
 

@@ -42,7 +42,6 @@ C = {
 
 UKURAN_WAJAH = (50, 50)
 K_KOMPONEN   = 50
-THRESHOLD    = 8000.0
 
 # Font
 F_TITLE  = ("Consolas", 20, "bold")
@@ -143,7 +142,7 @@ class FaceRecognitionApp:
         hdr.pack_propagate(False)
 
         tk.Label(
-            hdr, text="◈  EIGENFACE RECOGNITION",
+            hdr, text="EIGENFACE RECOGNITION",
             font=("Consolas", 16, "bold"),
             bg=C['panel'], fg=C['accent']
         ).pack(side='left', padx=20, pady=14)
@@ -183,7 +182,7 @@ class FaceRecognitionApp:
         self._section_label(sidebar, "DATASET")
 
         self.btn_dataset = self._make_button(
-            sidebar, "📁  Choose Dataset Folder",
+            sidebar, "Choose Dataset Folder",
             self._pilih_dataset, style='accent'
         )
         self.btn_dataset.pack(fill='x', **pad, pady=(0, 4))
@@ -197,7 +196,7 @@ class FaceRecognitionApp:
 
         # Badge status training
         self.badge_trained = tk.Label(
-            sidebar, text="  ○  NOT TRAINED  ",
+            sidebar, text="  NOT TRAINED  ",
             bg=C['warning'], fg='#000',
             font=("Consolas", 8, "bold"), padx=6, pady=2
         )
@@ -209,7 +208,7 @@ class FaceRecognitionApp:
         self._section_label(sidebar, "TEST IMAGE")
 
         self.btn_testimg = self._make_button(
-            sidebar, "🖼  Choose Test Image",
+            sidebar, "Choose Test Image",
             self._pilih_gambar_uji, style='normal'
         )
         self.btn_testimg.pack(fill='x', **pad, pady=(0, 4))
@@ -248,7 +247,7 @@ class FaceRecognitionApp:
 
         # ── Tombol Start ─────────────────────────────────────
         self.btn_start = self._make_button(
-            sidebar, "▶  Start Recognition",
+            sidebar, "Start Recognition",
             self._mulai_pengenalan, style='green'
         )
         self.btn_start.pack(fill='x', padx=14, pady=(10, 4))
@@ -361,7 +360,7 @@ class FaceRecognitionApp:
 
         # Tombol clear di kanan
         tk.Button(
-            term_hdr, text="✕ clear",
+            term_hdr, text="clear",
             command=self._clear_log,
             bg='#1a1a2e', fg=C['text_dim'],
             font=("Consolas", 7), bd=0, cursor='hand2',
@@ -445,7 +444,7 @@ class FaceRecognitionApp:
             self.folder_dataset = folder
             self.is_trained = False
             name = os.path.basename(folder)
-            self.lbl_dataset.config(text=f"📂 {name}", fg=C['text'])
+            self.lbl_dataset.config(text=f"{name}", fg=C['text'])
             self.badge_trained.config(text="  ○  NOT TRAINED  ", bg=C['warning'])
             self._set_status("Dataset dipilih. Siap diproses.")
 
@@ -457,7 +456,7 @@ class FaceRecognitionApp:
         )
         if path:
             self.path_gambar_uji = path
-            self.lbl_gambar.config(text=f"🖼 {os.path.basename(path)}", fg=C['text'])
+            self.lbl_gambar.config(text=f"{os.path.basename(path)}", fg=C['text'])
             self._tampilkan_gambar(path, self.lbl_img_uji, self.frame_img_uji)
 
     def _mulai_pengenalan(self):
@@ -498,7 +497,7 @@ class FaceRecognitionApp:
                 self.is_trained = True
                 self._after(
                     lambda: self.badge_trained.config(
-                        text="  ✓  TRAINED  ", bg=C['accent2'], fg='#000'
+                        text="  TRAINED  ", bg=C['accent2'], fg='#000'
                     )
                 )
 
@@ -506,8 +505,7 @@ class FaceRecognitionApp:
             label, path_cocok, jarak, pct = kenali_wajah(
                 self.path_gambar_uji,
                 self.mean_wajah, self.eigenfaces, self.omega_training,
-                self.label_wajah, self.path_paths,
-                ukuran_wajah=UKURAN_WAJAH, threshold=THRESHOLD
+                self.label_wajah, self.path_paths
             )
 
             durasi = time.time() - waktu_mulai
@@ -524,7 +522,7 @@ class FaceRecognitionApp:
     # ----------------------------------------------------------
 
     def _update_hasil(self, label, path_cocok, jarak, pct, durasi):
-        self.lbl_waktu.config(text=f"⏱ {durasi:.3f}s")
+        self.lbl_waktu.config(text=f"{durasi:.3f}s")
 
         if label is None:
             self.lbl_pct_val.config(text="0%", fg=C['danger'])
@@ -543,7 +541,7 @@ class FaceRecognitionApp:
             )
             self._tampilkan_gambar(path_cocok, self.lbl_img_hasil, self.frame_img_hasil)
 
-        self._set_status("Selesai ✓")
+        self._set_status("Selesai")
 
     def _selesai_proses(self):
         self.progress.stop()

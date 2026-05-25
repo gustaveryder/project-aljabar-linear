@@ -1,9 +1,6 @@
-# 🧠 Pengenalan Wajah dengan Eigenface
+# Pengenalan Wajah dengan Eigenface
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green)](https://opencv.org/)
-[![NumPy](https://img.shields.io/badge/NumPy-✓-brightgreen)](https://numpy.org/)
-[![Lisensi](https://img.shields.io/badge/Lisensi-MIT-yellow)](LICENSE)
+
 
 Aplikasi **pengenalan wajah** menggunakan algoritma **Eigenface** (Turk & Pentland, 1991), dibuat dari nol sebagai tugas mata kuliah **Aljabar Linear** di **Universitas Sebelas Maret (UNS)**.
 
@@ -11,7 +8,7 @@ Metode numerik inti — **dekomposisi eigen** dan **jarak Euclidean** — diimpl
 
 ---
 
-## 📸 Fitur
+## Fitur
 
 - **Nilai Eigen & Vektor Eigen Kustom**  
   Power Iteration dengan deflasi Hotelling — tidak menggunakan `numpy.linalg.eig` atau sejenisnya.
@@ -33,7 +30,7 @@ Metode numerik inti — **dekomposisi eigen** dan **jarak Euclidean** — diimpl
 
 ---
 
-## 📂 Struktur Proyek
+## Struktur Proyek
 
 ```
 .
@@ -49,7 +46,7 @@ Metode numerik inti — **dekomposisi eigen** dan **jarak Euclidean** — diimpl
 
 ---
 
-## 🧰 Persyaratan
+## Persyaratan
 
 - Python 3.8 atau lebih baru
 - Pustaka berikut (lihat `requirements.txt`):
@@ -68,7 +65,7 @@ Metode numerik inti — **dekomposisi eigen** dan **jarak Euclidean** — diimpl
 
 ---
 
-## ⚙️ Instalasi
+## Instalasi
 
 1. **Unduh atau clone repositori**:
    ```bash
@@ -90,7 +87,7 @@ Metode numerik inti — **dekomposisi eigen** dan **jarak Euclidean** — diimpl
 
 ---
 
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 ```bash
 python main.py
@@ -110,7 +107,7 @@ python main.py
 
 ---
 
-## 🗂 Struktur Dataset
+## Struktur Dataset
 
 Gunakan dataset wajah dengan susunan folder seperti berikut:
 
@@ -127,13 +124,13 @@ dataset_folder/
 ```
 
 Contoh dataset publik yang dapat digunakan untuk pengujian:  
-🔗 [Pins Face Recognition di Kaggle](https://www.kaggle.com/datasets/azizbali/football-players-faces-dataset)
+[Pins Face Recognition di Kaggle](https://www.kaggle.com/datasets/azizbali/football-players-faces-dataset)
 
 > **Catatan**: Program secara otomatis mendeteksi wajah menggunakan OpenCV. Jika tidak ada wajah yang terdeteksi, seluruh gambar akan digunakan.
 
 ---
 
-## 🔬 Metodologi
+## Metodologi
 
 ### Pelatihan Eigenface
 1. Ubah semua gambar latih menjadi vektor (flatten).
@@ -160,7 +157,7 @@ Tidak ada `linalg.eig`, `linalg.norm`, atau `math.sqrt` yang digunakan untuk ope
 
 ---
 
-## 🖥️ Tampilan GUI
+## Tampilan GUI
 
 *(Tambahkan tangkapan layar GUI ke dalam folder `screenshots/` dan ganti path di bawah jika ada)*
 
@@ -172,41 +169,12 @@ Tidak ada `linalg.eig`, `linalg.norm`, atau `math.sqrt` yang digunakan untuk ope
 
 ---
 
-## 📝 Kesesuaian dengan Tugas
 
-| Persyaratan | Status |
-|-------------|--------|
-| 1. Menerima folder dataset & gambar uji | ✅ |
-| 2. Sumber dataset bebas (misal Kaggle) | ✅ |
-| 3. Menampilkan gambar uji yang dipilih | ✅ |
-| 4. Pencocokan dengan Eigenface + jarak Euclidean | ✅ |
-| 5. Menampilkan 1 hasil terbaik atau pesan “tidak cocok” | ✅ |
-| 6. Perhitungan eigenvalue & eigenvector kustom | ✅ |
-| 7. Jarak Euclidean kustom (sqrt manual) | ✅ |
+## Kontributor
 
----
-
-## 👥 Kontributor
-
-- **Nama Mahasiswa 1** – `NIM 1`  
-- **Nama Mahasiswa 2** – `NIM 2`  
+- **Irawan Prasetyo** – `L0125016`  
+- **Muhammad Enno Ramadhan Al Firdaus** – `L0125024`  
+- **Muhammad Yoga Prakasa** – `L0125056`  
   *Kelas Aljabar Linear D, Universitas Sebelas Maret*
-
-
----
-
-## 📄 Lisensi
-
-Proyek ini dilisensikan di bawah Lisensi MIT – lihat file [LICENSE](LICENSE) untuk detail lengkap.
-
----
-
-## 🙏 Penghargaan
-
-- **M. Turk dan A. Pentland** (1991) – “Eigenfaces for Recognition”
-- **OpenCV** untuk pengklasifikasi Haar Cascade.
-- Komunitas **Kaggle** untuk dataset wajah publik.
-- **Dosen Pengampu** – atas tugas yang menantang dan bimbingannya.
-```
 
 ---
